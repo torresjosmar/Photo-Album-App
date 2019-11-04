@@ -2,17 +2,14 @@ package com.example.photoalbumapp.main.adapters
 
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.photoalbumapp.R
-import com.example.photoalbumapp.album.Album
+import com.example.photoalbumapp.album.AlbumView
 import com.example.photoalbumapp.service.models.AlbumResponse
 import kotlinx.android.synthetic.main.item_album_list.view.*
 
@@ -51,7 +48,7 @@ class AlbumListAdapter : RecyclerView.Adapter<AlbumListAdapter.ViewHolder>(){
 
             title.setOnClickListener(View.OnClickListener {
 
-                val intent = Intent(context, Album::class.java)
+                val intent = Intent(context, AlbumView::class.java)
                 intent.putExtra("albumId", album.id.toString())
                 context.startActivity(intent)
             })
