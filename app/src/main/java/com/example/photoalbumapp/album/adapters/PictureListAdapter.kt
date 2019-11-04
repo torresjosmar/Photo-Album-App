@@ -1,30 +1,37 @@
-package com.example.photoalbumapp.main.adapters
+package com.example.photoalbumapp.album.adapters
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.BitmapFactory
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.photoalbumapp.Picture.PictureDetailView
 import com.example.photoalbumapp.R
 import com.example.photoalbumapp.album.AlbumView
+import com.example.photoalbumapp.main.adapters.AlbumListAdapter
 import com.example.photoalbumapp.service.models.AlbumResponse
+import com.example.photoalbumapp.service.models.PictureResponse
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_album_list.view.*
+import java.net.URL
 
-class AlbumListAdapter : RecyclerView.Adapter<AlbumListAdapter.ViewHolder>(){
-
-    var albums: List<AlbumResponse>  = ArrayList()
+class PictureListAdapter : RecyclerView.Adapter<PictureListAdapter.ViewHolder>() {
+    var pictures: List<PictureResponse>  = ArrayList()
     lateinit var context: Context
 
-    fun AlbumListAdapter(albums : List<AlbumResponse>, context: Context){
-        this.albums = albums
+    fun PictureListAdapter(data: List<PictureResponse>, context: Context){
+        this.pictures = data
         this.context = context
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = albums.get(position)
+        val item = pictures.get(position)
         holder.bind(item, context)
     }
 
@@ -34,7 +41,7 @@ class AlbumListAdapter : RecyclerView.Adapter<AlbumListAdapter.ViewHolder>(){
     }
 
     override fun getItemCount(): Int {
-        return albums.size
+        return pictures.size
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -42,16 +49,18 @@ class AlbumListAdapter : RecyclerView.Adapter<AlbumListAdapter.ViewHolder>(){
         val icon = view.album_icon as ImageView
 
 
-        fun bind(album: AlbumResponse, context: Context) {
-            title.text = album.title
-            icon.setImageResource(R.drawable.album_icon)
+        fun bind(picture: PictureResponse, context: Context) {
+            title.text = picture.title
+
+            Picasso.get().load(picture.thumbnailUrl).into(icon)
 
             title.setOnClickListener(View.OnClickListener {
 
-                val intent = Intent(context, AlbumView::class.java)
-                intent.putExtra("albumId", album.id.toString())
+                val intent = Intent(context, PictureDetailView::class.java)
+                intent.putExtra("picture", picture)
                 context.startActivity(intent)
             })
+
         }
 
 
