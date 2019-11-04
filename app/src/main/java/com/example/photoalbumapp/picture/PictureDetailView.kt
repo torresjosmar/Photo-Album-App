@@ -1,12 +1,9 @@
-package com.example.photoalbumapp.Picture
+package com.example.photoalbumapp.picture
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import com.example.photoalbumapp.R
-import com.example.photoalbumapp.album.AlbumModel
-import com.example.photoalbumapp.album.AlbumPresenter
 import com.example.photoalbumapp.service.models.PictureResponse
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_picture_detail_view.*

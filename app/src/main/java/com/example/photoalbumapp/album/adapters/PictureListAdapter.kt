@@ -2,24 +2,17 @@ package com.example.photoalbumapp.album.adapters
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.BitmapFactory
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.photoalbumapp.Picture.PictureDetailView
+import com.example.photoalbumapp.picture.PictureDetailView
 import com.example.photoalbumapp.R
-import com.example.photoalbumapp.album.AlbumView
-import com.example.photoalbumapp.main.adapters.AlbumListAdapter
-import com.example.photoalbumapp.service.models.AlbumResponse
 import com.example.photoalbumapp.service.models.PictureResponse
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_album_list.view.*
-import java.net.URL
 
 class PictureListAdapter : RecyclerView.Adapter<PictureListAdapter.ViewHolder>() {
     var pictures: List<PictureResponse>  = ArrayList()
