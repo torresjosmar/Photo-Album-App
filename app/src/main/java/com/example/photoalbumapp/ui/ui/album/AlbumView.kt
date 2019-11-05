@@ -1,8 +1,7 @@
-package com.example.photoalbumapp.album
+package com.example.photoalbumapp.ui.ui.album
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import com.example.photoalbumapp.R
 

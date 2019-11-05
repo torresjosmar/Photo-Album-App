@@ -1,4 +1,4 @@
-package com.example.photoalbumapp.main.adapters
+package com.example.photoalbumapp.ui.ui.main.adapters
 
 import android.content.Context
 import android.content.Intent
@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.photoalbumapp.R
-import com.example.photoalbumapp.album.AlbumView
+import com.example.photoalbumapp.ui.ui.album.AlbumView
 import com.example.photoalbumapp.service.models.AlbumResponse
 import kotlinx.android.synthetic.main.item_album_list.view.*
 

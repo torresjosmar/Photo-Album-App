@@ -1,10 +1,8 @@
-package com.example.photoalbumapp.album
+package com.example.photoalbumapp.ui.ui.album
 
-import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.photoalbumapp.album.adapters.PictureListAdapter
-import com.example.photoalbumapp.service.models.AlbumResponse
+import com.example.photoalbumapp.ui.ui.album.adapters.PictureListAdapter
 import com.example.photoalbumapp.service.models.PictureResponse
 import kotlinx.android.synthetic.main.activity_album.*
 

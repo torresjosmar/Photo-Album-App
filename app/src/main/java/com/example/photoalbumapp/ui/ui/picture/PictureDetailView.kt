@@ -1,4 +1,4 @@
-package com.example.photoalbumapp.picture
+package com.example.photoalbumapp.ui.ui.picture
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

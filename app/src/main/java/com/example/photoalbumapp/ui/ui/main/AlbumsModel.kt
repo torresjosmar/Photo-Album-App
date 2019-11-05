@@ -1,9 +1,7 @@
-package com.example.photoalbumapp.main
+package com.example.photoalbumapp.ui.ui.main
 
-import android.util.Log
 import com.example.photoalbumapp.service.APIServiceImpl
 import com.example.photoalbumapp.service.models.AlbumResponse
-import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

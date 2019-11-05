@@ -1,14 +1,8 @@
-package com.example.photoalbumapp.main
+package com.example.photoalbumapp.ui.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.example.photoalbumapp.R
-import com.example.photoalbumapp.service.APIServiceImpl
-import com.example.photoalbumapp.service.models.AlbumResponse
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class AlbumsView : AppCompatActivity(), Albums {
 

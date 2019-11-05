@@ -1,4 +1,4 @@
-package com.example.photoalbumapp.album.adapters
+package com.example.photoalbumapp.ui.ui.album.adapters
 
 import android.content.Context
 import android.content.Intent
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.photoalbumapp.picture.PictureDetailView
+import com.example.photoalbumapp.ui.ui.picture.PictureDetailView
 import com.example.photoalbumapp.R
 import com.example.photoalbumapp.service.models.PictureResponse
 import com.squareup.picasso.Picasso

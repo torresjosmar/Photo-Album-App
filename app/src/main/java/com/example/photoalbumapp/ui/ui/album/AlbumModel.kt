@@ -1,9 +1,6 @@
-package com.example.photoalbumapp.album
+package com.example.photoalbumapp.ui.ui.album
 
-import android.util.Log
-import com.example.photoalbumapp.main.AlbumsPersenter
 import com.example.photoalbumapp.service.APIServiceImpl
-import com.example.photoalbumapp.service.models.AlbumResponse
 import com.example.photoalbumapp.service.models.PictureResponse
 import retrofit2.Call
 import retrofit2.Callback
